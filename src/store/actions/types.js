@@ -1,0 +1,1 @@
+export const ON_SET_SAMPLE_DATA = 'ON_SET_SAMPLE_DATA';

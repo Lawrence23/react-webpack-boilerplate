@@ -1,14 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { Provider } from 'react-redux';
+
 import App from './containers/app';
-import './common.css';
+import store from './store';
+import './styles/common.css';
 
 const run = () => {
-  ReactDOM.render(
-    <Router>
-      <App />
-    </Router>,
+  render(
+    <Provider store={store}>
+      <Router>
+        <App />
+      </Router>
+    </Provider>,
     document.querySelector('#root'),
   );
 };
